@@ -22,13 +22,16 @@ export default {
 </script>
 
 <style lang="scss">
+#__nuxt {
+    background-color: #E4E6EC;
+}
 .container {
     @apply m-auto;
 }
 .container .content {
     @apply flex flex-col justify-center items-center gap-6 sm:p-2 md:p-4 lg:p-8 xl:p-16;
     main {
-        @apply max-w-5xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6;
+        @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6;
     }
 }
 </style>
