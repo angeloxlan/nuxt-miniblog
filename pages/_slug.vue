@@ -38,6 +38,14 @@ export default {
             },
         }
     },
+    head() {
+        return {
+            title: this.post?.title,
+            meta: [
+                { name: 'description', content: this.post?.description || '' },
+            ],
+        }
+    },
 }
 </script>
 
