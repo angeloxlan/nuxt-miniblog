@@ -23,7 +23,7 @@ export default {
 
 <style lang="scss">
 #__nuxt {
-    background-color: #E4E6EC;
+    background-color: #e4e6ec;
 }
 .container {
     @apply m-auto;

@@ -4,7 +4,9 @@
             <img :src="cover" alt="thumbnail" />
         </figure>
         <div class="description">
-            <p class="author">{{ author }} - <small>{{ date }}</small></p>
+            <p class="author">
+                {{ author }} - <small>{{ date }}</small>
+            </p>
             <h3>{{ title }}</h3>
             <p class="short">{{ description }}</p>
         </div>
@@ -60,7 +62,7 @@ export default {
         h3 {
             @apply text-3xl font-bold;
         }
-        
+
         .short {
             @apply text-slate-400 font-semibold;
         }
