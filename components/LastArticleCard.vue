@@ -1,5 +1,5 @@
 <template>
-    <div class="last-article-card">
+    <NuxtLink :to="slug" class="last-article-card">
         <figure>
             <img :src="cover" alt="thumbnail" />
         </figure>
@@ -10,7 +10,7 @@
             <h3>{{ title }}</h3>
             <p class="short">{{ description }}</p>
         </div>
-    </div>
+    </NuxtLink>
 </template>
 
 <script>
@@ -46,7 +46,7 @@ export default {
 
 <style lang="scss" scoped>
 .last-article-card {
-    @apply flex justify-between rounded-lg bg-white;
+    @apply flex justify-between rounded-lg bg-white hover:scale-105 transition;
 
     figure {
         @apply rounded-lg overflow-hidden max-h-96;

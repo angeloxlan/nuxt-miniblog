@@ -2,9 +2,13 @@
     <div class="container">
         <AboutMe />
         <div class="content">
-            <LastArticleCard />
+            <LastArticleCard v-bind="recentPost" />
             <main>
-                <ArticleCard v-for="article in articles" :key="article.slug" />
+                <ArticleCard 
+                    v-for="article in postsWithoutMostRecent"
+                    :key="article.slug"
+                    v-bind="article"
+                />
             </main>
         </div>
     </div>
@@ -15,16 +19,54 @@ export default {
     name: 'IndexPage',
     data() {
         return {
-            articles: [1, 2, 3, 4, 5],
+            articles: [
+                {
+                    title: 'My first post',
+                    slug: 'my-first-post',
+                    date: new Date(),
+                    cover: 'https://via.placeholder.com/700x450',
+                },
+                {
+                    title: 'My second post',
+                    slug: 'my-second-post',
+                    date: new Date(),
+                    cover: 'https://via.placeholder.com/400x300',
+                },
+                {
+                    title: 'My second post',
+                    slug: 'my-second-post',
+                    date: new Date(),
+                    cover: 'https://via.placeholder.com/400x300',
+                },
+                {
+                    title: 'My second post',
+                    slug: 'my-second-post',
+                    date: new Date(),
+                    cover: 'https://via.placeholder.com/400x300',
+                },
+                {
+                    title: 'My second post',
+                    slug: 'my-second-post',
+                    date: new Date(),
+                    cover: 'https://via.placeholder.com/400x300',
+                },
+            ],
         }
+    },
+    computed: {
+        recentPost() {
+            return this.articles[0];
+        },
+        postsWithoutMostRecent() {
+            return this.articles.filter((article, index) => {
+                return index !== 0;
+            });
+        },
     },
 }
 </script>
 
 <style lang="scss">
-#__nuxt {
-    background-color: #e4e6ec;
-}
 .container {
     @apply m-auto;
 }

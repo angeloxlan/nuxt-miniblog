@@ -27,9 +27,9 @@ export default {
     data() {
         return {
             post: {
-                slug: 'mi-primer-post',
-                title: 'Mi primer post',
-                author: 'Diana Martínez',
+                slug: 'my-first-post',
+                title: 'My first post',
+                author: 'Angel Aguirre',
                 updated: 'May 12, 2022',
                 description: 'Lorem ispum dolor sit amet',
                 cover: 'https://via.placeholder.com/1024x420',
